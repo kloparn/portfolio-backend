@@ -5,6 +5,10 @@ const app = express();
 app.use((req, res, next) => {
   // Website you wish to allow to connect
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://adamh-portfolio.netlify.app"
+  );
 
   // Request methods you wish to allow
   res.setHeader(
