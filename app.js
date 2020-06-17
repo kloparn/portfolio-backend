@@ -2,6 +2,7 @@ const express = require("express");
 const { user, backend, frontend } = require("./scr/database/api");
 const app = express();
 const cors = require("cors");
+const port = process.env.PORT || 8000;
 
 app.use(cors());
 
@@ -27,6 +28,6 @@ app.get("*", (req, res) => {
   res.send("Error 404, page not found");
 });
 
-app.listen(8000, () => {
-  console.log("Loading the back-end server on port 8000!");
+app.listen(port, () => {
+  console.log("Loading the back-end server on ", port);
 });
