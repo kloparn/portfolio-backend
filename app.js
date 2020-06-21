@@ -13,15 +13,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/user", (req, res) => {
-  res.json(user());
+  res.json(user);
 });
 
 app.get("/api/backend", (req, res) => {
-  res.json(backend());
+  res.json(backend);
 });
 
 app.get("/api/frontend", (req, res) => {
-  res.json(frontend());
+  res.json(frontend);
 });
 
 app.get("*", (req, res) => {
