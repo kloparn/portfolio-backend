@@ -1,5 +1,5 @@
 const express = require("express");
-const { user, backend, frontend } = require("./scr/database/api");
+const { gitRepos, user, backend, frontend } = require("./scr/database/api");
 const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 8000;
@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.send(
     "Homepage to the api, visit one of these for api requests\napi/userInformation\napi/backendInformation\napi/frontendInformation"
   );
+});
+
+app.get("/api/gitRep", async (req, res) => {
+  res.json(await gitRepos());
 });
 
 app.get("/api/user", (req, res) => {

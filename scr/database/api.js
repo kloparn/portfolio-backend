@@ -1,3 +1,11 @@
+const axios = require("axios");
+const url = "https://api.github.com/users/kloparn/repos";
+
+const gitRepos = async () => {
+  const res = await axios.get(url).catch((e) => console.error(e));
+  return res.data;
+};
+
 const user = {
   name: "Adam",
   information:
@@ -27,4 +35,5 @@ module.exports = {
   user,
   backend,
   frontend,
+  gitRepos: gitRepos,
 };
