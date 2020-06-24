@@ -3,7 +3,19 @@ const url = "https://api.github.com/users/kloparn/repos";
 
 const gitRepos = async () => {
   const res = await axios.get(url).catch((e) => console.error(e));
-  return res.data;
+  return res.data
+    .filter((e) => !e.fork)
+    .map((r) => {
+      return {
+        key: r.id,
+        title: r.name,
+        description: r.description,
+        url: r.html_url,
+        created: r.created_at,
+        updated: r.updated_at,
+        language: r.language,
+      };
+    });
 };
 
 const user = {
