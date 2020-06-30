@@ -2,7 +2,10 @@ const axios = require("axios");
 const url = "https://api.github.com/users/kloparn/repos";
 
 const gitRepos = async () => {
-  const res = await axios.get(url).catch((e) => console.error(e));
+  const res = await axios.get(url).catch((e) => {
+    console.error(e);
+    return {};
+  });
   return res.data
     .filter((e) => !e.fork)
     .map((r) => {
@@ -20,8 +23,7 @@ const gitRepos = async () => {
 
 const user = {
   name: "Adam",
-  information:
-    "Graduated major from Jönköping University.\nGraduated in Computer science with a focus on Software development and mobile platforms",
+  information: "Graduated major from Jönköping University.\nGraduated in Computer science with a focus on Software development and mobile platforms",
   framework: "",
 };
 
@@ -33,8 +35,7 @@ const backend = {
 
 const frontend = {
   name: "frontend",
-  information:
-    "The frontend is what you are currently looking at. Like the backend card, this information is retrieved from the backend to make it easier to update the info",
+  information: "The frontend is what you are currently looking at. Like the backend card, this information is retrieved from the backend to make it easier to update the info",
   framework: "React with Typescript",
 };
 
