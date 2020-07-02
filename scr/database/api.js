@@ -31,15 +31,15 @@ const user = {
 const backend = {
   name: "backend",
   information:
-    "The back-end is built with node.js. Doing middleware stuff between github to retrieve information on what i have done.",
-  framework: "Nodejs",
+    "The back-end is built with node.js. Doing middleware stuff between github to filter information before retrieving it to the front-end.",
+  framework: "Node.js",
 };
 
 const frontend = {
   name: "frontend",
   information:
     "The front-end is built in React.TS. A reponsive and flexable framework to develop in and make it easy to implement single-page or mobile applications.",
-  framework: "React with Typescript",
+  framework: "React with Typescript (React.TS)",
 };
 
 module.exports = {
