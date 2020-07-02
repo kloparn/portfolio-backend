@@ -24,14 +24,14 @@ const gitRepos = async () => {
 const user = {
   name: "Adam",
   information:
-    "Graduated from Jönköping University.<br/>Graduated in Computer science with a focus on Software development and mobile platforms.",
+    "Graduated from Jönköping University. Graduated in Computer science with a focus on Software development and mobile platforms.",
   framework: "",
 };
 
 const backend = {
   name: "backend",
   information:
-    "The back-end is built with node.js.<br/>Doing middleware stuff between github to retrieve information on what i have done.",
+    "The back-end is built with node.js. Doing middleware stuff between github to retrieve information on what i have done.",
   framework: "Nodejs",
 };
 
