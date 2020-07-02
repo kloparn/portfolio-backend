@@ -23,19 +23,22 @@ const gitRepos = async () => {
 
 const user = {
   name: "Adam",
-  information: "Graduated major from Jönköping University.\nGraduated in Computer science with a focus on Software development and mobile platforms",
+  information:
+    "Graduated from Jönköping University.<br/>Graduated in Computer science with a focus on Software development and mobile platforms.",
   framework: "",
 };
 
 const backend = {
   name: "backend",
-  information: "All you see currently is being retrieved from the backend",
+  information:
+    "The back-end is built with node.js.<br/>Doing middleware stuff between github to retrieve information on what i have done.",
   framework: "Nodejs",
 };
 
 const frontend = {
   name: "frontend",
-  information: "The frontend is what you are currently looking at. Like the backend card, this information is retrieved from the backend to make it easier to update the info",
+  information:
+    "The front-end is built in React.TS. A reponsive and flexable framework to develop in and make it easy to implement single-page or mobile applications.",
   framework: "React with Typescript",
 };
 
